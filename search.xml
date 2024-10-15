@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>弄個字體也太麻煩了吧!</title>
+    <url>/2024/10/14/font/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>身為一個有一點點視覺主義的人，就覺得網頁字體應該要弄得漂漂亮亮的，用原本的微軟正黑體太一般了。<br>索性買了文鼎字庫的雲端字體服務來使用，結果一直卡在官方的JS無法嵌入到hexo的<code>&lt;head&gt;</code>標籤內(最後發現是根本沒有雲端字體授權)，</p>
+<p>於是感謝Google拔拔免費提供雲端字體服務，目前本站也暫時使用此服務，之後如果有看到更好的可能會再更換!</p>
+<h2 id="實際操作"><a href="#實際操作" class="headerlink" title="實際操作"></a>實際操作</h2><p>Google Fonts服務使用起來算是相當簡單的，只需要在css內新增一個<code>@import</code>語法並使用<code>font-family</code>引入即可。<br>本站使用的字體為思源宋體。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@import</span> url(<span class="string">&#x27;https://fonts.googleapis.com/css2?family=Noto+Serif+TC&amp;display=swap&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: <span class="string">&quot;Noto Serif TC&quot;</span>, serif;</span><br><span class="line">    <span class="attribute">font</span>-optical-sizing: auto;</span><br><span class="line">    <span class="attribute">font-weight</span>: <span class="number">400</span>;</span><br><span class="line">    <span class="attribute">font-style</span>: normal;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
+</search>
