@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>弄個字體也太麻煩了吧!</title>
+    <url>/2024/10/14/font/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>身為一個有一點點視覺主義的人，就覺得網頁字體應該要弄得漂漂亮亮的，用原本的微軟正黑體太一般了。<br>索性買了文鼎字庫的雲端字體服務來使用，結果一直卡在官方的JS無法嵌入到hexo的<code>&lt;head&gt;</code>標籤內(最後發現是根本沒有雲端字體授權)，</p>
+<p>於是感謝Google拔拔免費提供雲端字體服務，目前本站也暫時使用此服務，之後如果有看到更好的可能會再更換!</p>
+<h2 id="實際操作"><a href="#實際操作" class="headerlink" title="實際操作"></a>實際操作</h2><p>Google Fonts服務使用起來算是相當簡單的，只需要在css內新增一個<code>@import</code>語法並使用<code>font-family</code>引入即可。<br>本站使用的字體為思源黑體。</p>
+<p>P.S. 好想用明黑混合體啊</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@import</span> url(<span class="string">&#x27;https://fonts.googleapis.com/css2?family=Noto+Sans+TC&amp;display=swap&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: <span class="string">&quot;Noto Sans TC&quot;</span>, sans-serif;</span><br><span class="line">    <span class="attribute">font</span>-optical-sizing: auto;</span><br><span class="line">    <span class="attribute">font-weight</span>: <span class="number">400</span>;</span><br><span class="line">    <span class="attribute">font-style</span>: normal;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
+  <entry>
+    <title>Hexo裡圖片該怎麼壓縮</title>
+    <url>/2024/10/16/how-to-compress-images-in-hexo/</url>
+    <content><![CDATA[<h1 id="Hexo裡圖片該怎麼壓縮"><a href="#Hexo裡圖片該怎麼壓縮" class="headerlink" title="Hexo裡圖片該怎麼壓縮"></a>Hexo裡圖片該怎麼壓縮</h1><p>其實起因是因為在<a href="/about">關於我</a>那邊路可畫的圖實在有點太大張了，即使有分段載入還是看他轉圈轉了蠻久的，所以就想寫一個自動壓縮的程式。<br>大致概念是這樣的:</p>
+<ol>
+<li>用javascript的sharp模組將圖片壓縮到最大不超過500px，並丟到<code>images/</code>對應名稱的資料夾下</li>
+<li>把原本<code>&lt;img&gt;</code>src欄位改成壓縮過的圖片位置</li>
+</ol>
+<h2 id="使用說明"><a href="#使用說明" class="headerlink" title="使用說明"></a>使用說明</h2><ol>
+<li>在<code>_posts</code>資料夾下建立與自己文章檔案同名的資料夾</li>
+<li>在資料夾內放入要用的圖片，文章內的網址直接用該圖片名稱</li>
+<li>執行<code>node compress.js</code>即可直接壓縮並替換文章內容的名稱</li>
+</ol>
+<p>讓我放一張圖測試用XD</p>
+<img    
+                       lazyload
+                       alt="image"
+                       data-src="/images/how-to-compress-images-in-hexo/25.png"
+                         width="50%"
+                 >
+
+<h2 id="compressor-js下載"><a href="#compressor-js下載" class="headerlink" title="compressor.js下載"></a>compressor.js下載</h2><p>按我下載<a href="/compressor.js">compressor.js</a></p>
+]]></content>
+  </entry>
+</search>
